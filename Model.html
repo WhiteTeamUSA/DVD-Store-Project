@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    padding: 10px;
+    background: #f1f1f1;
+}
+
+input[type=text], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type = submit] {
+    width: 25%;
+    background-color:aqua;
+    color: white;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: red;
+    border-radius: 8px;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: #ddd;
+    }
+
+/* Header/Blog Title */
+.header {
+    padding: 30px;
+    text-align: center;
+    background: white;
+}
+
+.header h1 {
+    font-size: 50px; 
+}
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+    float: left;
+    width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+}
+
+/* Movie images */
+.picimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+} 
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>White Team DVD Online Store</h1>
+  <p>adding  a scroll here showing graphics, advertisement </p>
+  <a href = "#" style = "float:right" >Welcome "CustomerName"</a>
+</div>
+
+<div class="topnav">
+     <a href = "#"> Select your search choice:<select>
+         <option value = 'Select'>empty selection</option>
+         <option value = 'genre'>Genre</option>
+         <option value = 'rating'>Rating</option>
+        <option value = 'actors'>Actors</option>
+         <option value = 'title'>Title</option>
+        </select>
+     </a>
+    <a href = "#">
+        <form action = "/action_page.php">
+        <input type = "text" name = "MovieSearch"  value = "">
+        <input type = "search" Value = "Search" style = "float:right">
+        </form>
+    </a>    
+ 
+   <a href="#" style="float:right">Search</a>
+  
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>CATEGORY</h2>
+     
+      <div class="picimg" style="height:200px;">Image of movies</div>
+      <p>images of movies that fall under the category..</p>
+      
+    </div>
+    
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Now Playing</h2>
+      <div class="picimg" style="height:100px;">Movie</div>
+      <p>preview of one of our movies..</p>
+    </div>
+    <div class="card">
+      <h3>Popular Picks</h3>
+      <div class="picimg"><p>Rush Hour</p></div>
+      <div class="picimg"><p>Brave Heart</p></div>
+      <div class="picimg"><p>Movie</p></div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Footer</h2>
+  <a href = "about">About</a>
+  <a href = "contact">Contact</a>
+</div>
+
+</body>
+</html>
+
